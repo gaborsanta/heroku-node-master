@@ -10,13 +10,14 @@
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
-	<form id="form" method="POST" action="/">
+	<form id="form" method="POST" action = "/process_post">
 		To: <input type="text" name="To" placeholder="1-(111)-111-1111"/>
 		Body: <input type="text" name="Body" placeholder="type message here"/>
 		<input type="hidden" name="From" value="19179243374" >
-		<input type="submit" />
+		<input type="submit" onclick="sendTextMessage()" />
 	</form>
 
 
