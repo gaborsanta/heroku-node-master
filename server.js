@@ -46,8 +46,10 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 				console.log('All good');
 			}
 
-	 });
+	 		});
 
+
+   		res.end("Message Sent");
 });
 
 
