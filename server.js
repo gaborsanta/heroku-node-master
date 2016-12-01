@@ -40,12 +40,13 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 			 body: req.body.Body,
 	 }, function(err, message) {
 			 console.log(message.sid);
+			 console.log(err);
 	 });
 
-})
+});
 
 
-app.post("/", function(req, res){
+/* app.post("/", function(req, res){
 
     console.log("a user has request /the-form via POST");
 
@@ -69,9 +70,7 @@ app.post("/", function(req, res){
     //send message to user
     //response.send("okay, we'll process that right away.")
 });
-
+*/
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
-
-//http://localhost:8080
