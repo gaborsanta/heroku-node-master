@@ -39,8 +39,13 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 			 from: req.body.From,
 			 body: req.body.Body,
 	 }, function(err, message) {
-			 console.log(message.sid);
-			 console.log(err);
+		 if (err) {
+			  console.error('Something is wrong'),
+				console.error(err);
+			}else {
+				console.log('All good');
+			}
+
 	 });
 
 });
